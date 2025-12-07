@@ -1,148 +1,74 @@
-# 儿童识字小报生成系统
+# 儿童识字小报生成器 - GitHub Pages部署版
 
-基于 Nano Banana Pro API 的儿童识字小报生成系统，专为 5-9 岁儿童设计，帮助教育机构快速生成高质量的教学材料。
+这是一个专为5-9岁儿童设计的智能学习材料生成工具，使用AI生成带有中文和拼音标注的场景化识字小报。
+
+## 在线演示
+
+👉 **[点击这里在线访问](https://yourusername.github.io/your-repo-name/)**
+
+（请将 `yourusername` 替换为你的GitHub用户名，`your-repo-name` 替换为仓库名）
 
 ## 功能特点
 
-- 🎨 **智能生成**：基于 AI 的图像生成技术，自动创建儿童识字小报
-- 📚 **丰富场景**：支持超市、医院、公园、学校、动物园等多种场景
-- 🔤 **识字标注**：自动生成带拼音的中文词汇标注
-- 📱 **响应式设计**：支持桌面和移动设备访问
-- ⚡ **实时反馈**：实时显示生成进度，支持 Server-Sent Events
+- 🎨 **场景化生成**：支持超市、医院、公园、学校、动物园等多种场景
+- 📚 **智能标注**：自动为生成的小报添加中文和拼音标注
+- 🔧 **易于使用**：简洁的Web界面，输入API密钥即可使用
+- 💾 **一键保存**：支持生成图片的直接下载
+- 🎯 **专为儿童设计**：适合5-9岁儿童的认知和学习特点
+- 🚀 **即开即用**：无需安装，直接在浏览器中使用
 
-## 技术架构
+## 使用说明
 
-- **前端**：原生 JavaScript + HTML + CSS
-- **后端**：Node.js + Express.js
-- **AI服务**：Nano Banana Pro API
-- **数据存储**：JSON 文件存储
+### 获取API密钥
 
-## 快速开始
+1. 访问 [KIE AI API密钥页面](https://kie.ai/api-key)
+2. 注册并获取Nano Banana Pro的API密钥
+3. 在应用中输入API密钥
 
-### 环境要求
+### 生成小报
 
-- Node.js >= 14.0.0
-- npm >= 6.0.0
+1. 在页面中输入API密钥
+2. 选择场景（超市、医院、公园、学校、动物园）
+3. 输入小报标题（如：快乐超市、有趣的动物园）
+4. 点击"生成小报"按钮
+5. 等待生成完成（约30-60秒）
+6. 查看并下载生成的小报
 
-### 安装步骤
+## 本地运行
 
-1. 克隆项目
-```bash
-git clone <repository-url>
-cd ertong
-```
+如果你想在自己的电脑上运行：
 
-2. 安装后端依赖
-```bash
-cd backend
-npm install
-```
-
-3. 配置环境变量
-```bash
-cp .env.example .env
-# 编辑 .env 文件，添加您的 API 密钥
-NANO_API_KEY=your_api_key_here
-```
-
-4. 安装前端依赖
-```bash
-cd ../frontend
-npm install
-```
-
-### 运行项目
-
-1. 启动后端服务
-```bash
-cd backend
-npm start
-```
-后端将在 http://localhost:3001 运行
-
-2. 启动前端服务（新开终端）
-```bash
-cd frontend
-npm start
-```
-前端将在 http://localhost:3000 运行
-
-3. 访问应用
-在浏览器中打开 http://localhost:3000
-
-## API 密钥配置
-
-请访问 [Kie AI API Key 管理页面](https://kie.ai/api-key) 获取您的 API 密钥。
+1. 克隆或下载本项目
+2. 直接用浏览器打开 `index.html` 文件即可
 
 ## 项目结构
 
 ```
-ertong/
-├── backend/                     # 后端服务
-│   ├── src/
-│   │   ├── data/
-│   │   │   └── vocabulary.json  # 词汇库数据
-│   │   ├── routes/
-│   │   │   └── generate.js      # 生成相关路由
-│   │   ├── services/
-│   │   │   ├── vocabularyManager.js    # 词汇管理
-│   │   │   ├── promptGenerator.js      # 提示词生成
-│   │   │   └── nanoAPI.js             # API集成
-│   │   └── app.js             # 主应用文件
-│   └── .env.example           # 环境变量模板
-├── frontend/                   # 前端应用
-│   ├── public/
-│   │   └── index.html         # 主页面
-│   ├── src/
-│   │   └── app.js             # 前端逻辑
-│   └── server.js              # 前端服务器
-└── README.md                  # 项目文档
+gh-pages-deploy/
+├── index.html    # 主页面
+├── style.css     # 样式文件
+├── app.js        # 应用逻辑
+└── README.md     # 说明文档
 ```
 
-## 使用说明
+## 技术栈
 
-1. 选择一个场景（如：超市、医院、公园等）
-2. 输入小报标题（如：快乐超市、有趣的动物园）
-3. 点击"开始生成"按钮
-4. 等待系统生成识字小报
-5. 生成成功后，可以下载或重新生成
+- **前端**：纯HTML5, CSS3, JavaScript (ES6+)
+- **AI服务**：KIE AI Nano Banana Pro
+- **部署**：GitHub Pages
 
-## 支持的场景
+## 注意事项
 
-- **超市**：收银员、货架、苹果、牛奶等
-- **医院**：医生、护士、听诊器、病床等
-- **公园**：滑梯、秋千、花朵、草地等
-- **学校**：老师、黑板、课桌、书本等
-- **动物园**：熊猫、大象、长颈鹿、猴子等
+- API密钥会保存在浏览器的localStorage中
+- 每次生成需要消耗API配额，请合理使用
+- 生成时间约30-60秒，请耐心等待
+- 如果图片无法显示，会提供备用方案（在新窗口打开或下载）
+- 本项目不收集或存储任何用户数据
 
-## 开发计划
+## 问题反馈
 
-- [ ] 支持自定义词汇添加
-- [ ] 批量生成功能
-- [ ] PDF 导出功能
-- [ ] 多语言支持
-- [ ] 用户管理系统
-
-## 故障排除
-
-### 常见问题
-
-1. **API 密钥错误**
-   - 确保在 `.env` 文件中正确配置了 `NANO_API_KEY`
-   - 检查 API 密钥是否有效且有足够的余额
-
-2. **网络错误**
-   - 确保后端服务正在运行在 http://localhost:3001
-   - 检查防火墙设置
-
-3. **生成失败**
-   - 检查输入的标题是否过长（建议不超过 20 个字符）
-   - 确保选择了有效的场景
-
-## 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
+如果你在使用过程中遇到问题，请在GitHub仓库中提交Issue。
 
 ## 许可证
 
-MIT License
+MIT License - 可自由使用和分发
